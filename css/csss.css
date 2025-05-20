@@ -11,12 +11,12 @@ html,body{
     padding: 0;
     box-sizing: border-box;
     display: flex;
-    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 main{
-    border: 1px solid red;
-    margin-top: 50px ;
+    margin-top: 30px ;
     display: flex;
     flex-direction: column;
     height: 75%;
@@ -27,7 +27,6 @@ main{
 /* barra de navegacao */
 
 header{
-    border: 1px solid green;
     width: 100%;
     height: 50px;
     display: flex;
@@ -76,9 +75,8 @@ nav{
 
 /* corpo da pagina */
 
-section{
-    border: 1px solid blue;
-    height: 100%;
+#secaoTexto{
+    height: 700px;
     display: flex;
     align-items: center;
 }
@@ -106,11 +104,28 @@ section{
 }
 
 .botaoAcesso{
-    
+    display: flex;
+    gap: 30px;
+}
+
+.botaoAcesso a{
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px 35px 10px 35px;
+}
+
+.singUp{
+    color: white;
+    background-color: rgb(54, 148, 255) ;
+}
+
+.showMore{
+    color: rgb(54, 148, 255);
 }
 
 .localImagem{
-    border: 1px solid blue;
+
     width: 55%;
     height: 80%;
 }
@@ -118,4 +133,35 @@ section{
 .imagemSite{
     height: 100%;
     width: 100%;
+}
+
+/* rodape */
+
+footer{
+    display: flex;
+    width: 100%;
+    height: 70%;
+    background-color: rgb(54, 148, 255);
+    
+}
+
+.areaRodape{
+    width: 100%;
+    height: 100%;
+    margin-left: 120px;    
+    display: flex;
+    
+}
+
+#part2,#part3{
+    padding: 20px 70px 20px 70px;
+}
+
+#part1{
+    background-color: rgb(244, 244, 244);
+    padding: 20px 70px 20px 70px;
+}
+
+#part2,#part3{
+    color: white;
 }
