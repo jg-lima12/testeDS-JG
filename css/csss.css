@@ -159,7 +159,11 @@ footer{
 
 #part1{
     background-color: rgb(244, 244, 244);
-    padding: 20px 70px 20px 70px;
+    padding: 40px 70px 20px 70px;
+    transform: translateY(-18px);
+    height: 80%;
+    box-shadow: 0 0 3px 2px rgba(128, 128, 128, 0.349);
+
 }
 
 #part2,#part3{
