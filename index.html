@@ -1,29 +1,146 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Teste 1</title>
-    <link rel="stylesheet" href="css/csss.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
-</head>
-<body>
-<div class="swiper">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/csss.css">
+  <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
 
-  <div class="swiper-wrapper">
-    <div class="swiper-slide">Slide 1</div>
-    <div class="swiper-slide">Slide 2</div>
-    <div class="swiper-slide">Slide 3</div>
+  <style>
+    
+    .swiper-button-prev, .swiper-button-next{
+      color: white;
+      font-weight: 900;  
+    }
+
+    .swiper{
+
+      border-radius: 25px;
+      padding: 10px 0;
+      width: 900px;
+      height: fit-content;
+      border: 3px solid white;
+    }
+
+    .swiper-wrapper{
+      display: flex;
+      align-items: center;
+      margin-top:30px;
+      margin-bottom:30px;
+    }
+
+    .swiper-slide{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: fit-content;
+      height: fit-content;
+    }
+
+    .swiper-slide #img1{
+      background-image: url(img/bc-cardContex1.jpg);
+      background-position: center;
+      background-size: cover;
+    }
+    .swiper-slide #img2{
+      background-image: url(img/bc-cardContex2.jpg);
+      background-position: center;
+      background-size: cover;
+    }
+    .swiper-slide #img3{
+      background-image: url(img/bc-cardContex3.jpg);
+      background-position: center;
+      background-size: cover;
+    }
+    .swiper-slide #img4{
+      background-image: url(img/bc-cardContex4.jpg);
+      background-position: center;
+      background-size: cover;
+    }
+
+    .swiper-slide div{
+      width: 200px;
+      height: 280px;
+      border-radius:30px;
+      transition: transform 0.3s ease ;
+      position: relative;
+    }
+
+    .swiper-pagination{
+      /* color: white; */
+    }
+
+    .swiper-pagination-bullet-active{
+      background-color: white;
+    }
+
+    .swiper-pagination-bullet{
+      background-color: gray;
+    }
+
+
+    .swiper-slide div:hover{
+      transform: scale(1.1);
+      cursor: pointer;
+    }
+
+    /* .swiper-slide div:hover::before{
+      background-color: rgba(128, 128, 128, 0.432);
+    } */
+    
+    
+  </style>
+
+</head>
+
+
+<body>
+  <div class="swiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><div id="img1"></div></div>
+      <div class="swiper-slide"><div id="img2"></div></div>
+      <div class="swiper-slide"><div id="img3"></div></div>
+      <div class="swiper-slide"><div id="img4"></div></div> 
+    </div>
+    <div class="swiper-pagination"></div>
+
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+
   </div>
 
-  <div class="swiper-pagination"></div>
 
-  <div class="swiper-button-prev"></div>
-  <div class="swiper-button-next"></div>
 
-  <div class="swiper-scrollbar"></div>
-</div>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="js/js.js"></script>
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+var swiper = new Swiper(".swiper", {
+  slidesPerView: 3,
+  effect: "coverflow",
+  loop:true,
+  navigation:{
+    nextEl:".swiper-button-next",
+    prevEl:".swiper-button-prev"
+  },     
+  pagination: {
+    el: ".swiper-pagination",
+    clickable:true,
+  },
+  coverflowEffect: {
+    rotate: 50,
+    stretch: 0,
+    depth: 100,
+    modifier: 1,
+    slideShadows: false // 👈 DESLIGA A SOMBRA AQUI
+  },
+});
+  </script>  
 </body>
 </html>
