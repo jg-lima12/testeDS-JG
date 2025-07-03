@@ -1,167 +1,55 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
-
 *{
-    font-family: "Roboto";
-}
-
-html,body{
-    width: 100%;
-    height: 100%;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
 }
 
-main{
-    margin-top: 30px ;
-    display: flex;
-    flex-direction: column;
-    height: 75%;
-    width: 87%;
-
+:root{
+    --azulFraco: rgb(122, 164, 255);
+    --bordar: 1px solid red;
 }
 
-/* barra de navegacao */
-
-header{
+body,html{
+    min-height: 100vh;
     width: 100%;
-    height: 50px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.logo{
-    display: flex;
-    align-items:center;
-}
-
-.imgLogo{
-    height: 100%;
-}
-
-.logo h2{
-    margin-left: 30px ;
-}
-
-.leterLogo{
-    color: rgb(54, 148, 255);
-}
-
-nav{
-    display: flex;
-}
-
-.menuArea{
-    width: 500px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.menuArea li{
-    list-style-type: none;
-    font-weight: bold;
-    color: rgb(102, 118, 138);
-}
-
-.menuArea li:hover{
-    cursor: pointer;
-    border-bottom: 2px solid rgb(54, 148, 255);
-}
-
-/* corpo da pagina */
-
-#secaoTexto{
-    height: 700px;
-    display: flex;
-    align-items: center;
-}
-
-.textoSecao{
     display: flex;
     justify-content: center;
-    flex-direction: column;
-    height: 65%;
-    width: 45%;
+    align-items: center;
+    background-image: linear-gradient(60deg, rgb(43, 43, 43), black);
 }
 
-
-.textoSecao p{
-    font-size: 25px;
-    color: rgb(54, 148, 255);
-    font-weight: bold;
-}
-
-.textoSecao h1{
-    font-size: 80px;
-    margin-top: -5px;
-    margin-bottom: 30px;
-    font-weight: 1000;
-}
-
-.botaoAcesso{
+.container{
+    width: 80%;
+    height: 300px;
     display: flex;
-    gap: 30px;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border: var(--bordar);
 }
 
-.botaoAcesso a{
-    text-decoration: none;
-    font-size: 20px;
-    font-weight: bold;
-    padding: 10px 35px 10px 35px;
+.card{
+    /* width: 100px;
+    height: 100px;
+    background-color: transparent;
+    animation: posicao 10s ease-in-out infinite;
+    border-top: 10px solid rgb(35, 137, 255);
+    border-radius: 50%; */
+    width: 100px;
+    height: 100px;
+    border: 10px solid var(--azulFraco);
+    border-top: 10px solid transparent;
+    border-radius: 50%;
+    position: absolute;
+    animation: posicao 2s linear infinite;
 }
 
-.singUp{
-    color: white;
-    background-color: rgb(54, 148, 255) ;
-}
 
-.showMore{
-    color: rgb(54, 148, 255);
-}
-
-.localImagem{
-
-    width: 55%;
-    height: 80%;
-}
-
-.imagemSite{
-    height: 100%;
-    width: 100%;
-}
-
-/* rodape */
-
-footer{
-    display: flex;
-    width: 100%;
-    height: 70%;
-    background-color: rgb(54, 148, 255);
-    
-}
-
-.areaRodape{
-    width: 100%;
-    height: 100%;
-    margin-left: 120px;    
-    display: flex;
-    
-}
-
-#part2,#part3{
-    padding: 20px 70px 20px 70px;
-}
-
-#part1{
-    background-color: rgb(244, 244, 244);
-    padding: 20px 70px 20px 70px;
-}
-
-#part2,#part3{
-    color: white;
+@keyframes posicao {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
 }
