@@ -12,6 +12,10 @@
 
   <style>
     
+    :root{
+      --borda:2px solid white,
+    }
+
     .swiper-button-prev, .swiper-button-next{
       color: white;
       font-weight: 900;  
@@ -31,6 +35,7 @@
       align-items: center;
       margin-top:30px;
       margin-bottom:30px;
+      border: var(--borda);
     }
 
     .swiper-slide{
@@ -39,6 +44,7 @@
       align-items: center;
       width: fit-content;
       height: fit-content;
+      border: var(--borda);
     }
 
     .swiper-slide #img1{
@@ -120,7 +126,6 @@
   <script>
 var swiper = new Swiper(".swiper", {
   slidesPerView: 3,
-  effect: "coverflow",
   loop:true,
   navigation:{
     nextEl:".swiper-button-next",
